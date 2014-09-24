@@ -1,16 +1,34 @@
 package br.com.escola.cadastro;
 
-import android.support.v7.app.ActionBarActivity;
+//import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class FormularioActivity extends ActionBarActivity {
+//public class FormularioActivity extends ActionBarActivity {
+public class FormularioActivity extends Activity{
 
+	private FormularioHelper helper;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.formulario);
+		//Vinculando um listener ao clique do botão "Salvar":
+		Button botao = (Button) findViewById(R.id.botao);
+		botao.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				//Ao clicar no botao, sera exibido um toast...
+				Toast.makeText(FormularioActivity.this, "Você clicou no botão", Toast.LENGTH_LONG).show();
+				//Apos exibir o toast voltaremos novamente para a lista de contatos
+				finish();e
+			}
+		});
 	}
 
 	@Override

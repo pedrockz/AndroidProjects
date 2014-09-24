@@ -1,6 +1,8 @@
 package br.com.escola.cadastro;
 
-import android.support.v7.app.ActionBarActivity;
+//import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,7 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class ListaContatos extends ActionBarActivity {
+//public class ListaContatos extends ActionBarActivity {
+public class ListaContatos extends Activity {
 
     private ListView listaContatos;
 	
@@ -59,10 +62,26 @@ public class ListaContatos extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    	//Descobrir o id do menu clicado
+    	switch(item.getItemId()){
+    	case R.id.menu_novo:
+    		Intent intent = new Intent(this, FormularioActivity.class);
+    		startActivity(intent);
+    		return false;
+    		
+    	default:
+    		return super.onOptionsItemSelected(item);
+    	}
     }
+    
+    //Criando o menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+    	//Uso do MenuInflater para inflar o xml do menu criado, para que o menu fique visível na tela
+    	getMenuInflater().inflate(R.menu.menu_principal, menu);
+    	return super.onCreateOptionsMenu(menu);
+    }
+
 }
+    
+
