@@ -1,0 +1,97 @@
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<LinearLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" >
+    
+    	<!-- ImageView para colocar a foto do contato cadastrado -->
+    	<ImageView 
+    	    android:id="@+id/foto"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center"
+        	android:src="@drawable/ic_no_image" >
+        </ImageView>
+        
+    	<!-- Entrada dos demais dados: -->
+    
+    	<!-- NOME -->
+    	<TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Nome:">
+    	</TextView>
+    	<EditText
+    	    android:id="@+id/nome"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" >  
+        	<requestFocus />      
+    	</EditText>
+    	
+    	<!-- SITE -->
+    	<TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Site:">
+    	</TextView>
+    	<EditText
+    	    android:id="@+id/site"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" >        
+    	</EditText>
+    
+    	<!-- ENDERECO -->
+    	<TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Endereço:">
+    	</TextView>
+    	<EditText
+    	    android:id="@+id/endereco"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" >        
+    	</EditText>
+    	
+    	<!-- TELEFONE -->
+    	<TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Telefone:">
+    	</TextView>
+    	<EditText
+    	    android:id="@+id/telefone"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" >        
+    	</EditText>
+    
+    	<!-- NOTA: -->
+    	<TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Gosta?" >
+    	</TextView>
+    	<RatingBar
+    	    android:id="@+id/nota"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:numStars="5" >
+    	</RatingBar>
+    
+    	<!-- BOTAO PARA SALVAR -->
+    	<Button
+    	    android:id="@+id/botao"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="Salvar Contato" >
+    	</Button>
+    
+    
+    
+    
+	</LinearLayout>
+
+</ScrollView>
