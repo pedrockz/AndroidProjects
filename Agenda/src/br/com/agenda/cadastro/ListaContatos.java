@@ -1,6 +1,7 @@
-package br.com.escola.cadastro;
+package br.com.agenda.cadastro;
 
 //import android.support.v7.app.ActionBarActivity;
+import br.com.escola.cadastro.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
